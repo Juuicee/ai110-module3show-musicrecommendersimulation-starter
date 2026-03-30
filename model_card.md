@@ -17,6 +17,7 @@ Prompts:
 - What assumptions does it make about the user  
 - Is this for real users or classroom exploration  
 
+The recommender suggests songs from a small catalog based on user preferences for genre, mood, and energy. It’s designed for learning about recommendation logic rather than real users. The system assumes users have clear preferences, like “pop/happy” or “lofi/chill.”
 ---
 
 ## 3. How the Model Works  
@@ -56,6 +57,10 @@ Prompts:
 - User types for which it gives reasonable results  
 - Any patterns you think your scoring captures correctly  
 - Cases where the recommendations matched your intuition  
+
+Gives reasonable results for users with clear genre/mood preferences.
+Captures energy preferences in a simple way, helping to distinguish between similar songs.
+Correctly ranks songs that match both genre and mood highest.
 
 ---
 
@@ -98,6 +103,9 @@ Prompts:
 - Improving diversity among the top results  
 - Handling more complex user tastes  
 
+Consider related or similar genres/moods instead of exact matches.
+Improve diversity in top recommendations to avoid favoring a few genres.
+
 ---
 
 ## 9. Personal Reflection  
@@ -109,3 +117,5 @@ Prompts:
 - What you learned about recommender systems  
 - Something unexpected or interesting you discovered  
 - How this changed the way you think about music recommendation apps  
+
+This project taught me how recommendation systems combine user preferences with item features. It made me realize the subtle biases that can appear even in a simple scoring system. It also highlighted the challenge of balancing user preference accuracy with diversity in recommendations.
