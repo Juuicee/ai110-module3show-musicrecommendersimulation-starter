@@ -201,6 +201,11 @@ Some prompts:
 - Is it biased toward high energy or one genre by default
 - How could this be unfair if used in a real product
 
+Songs only score points if the genre and mood exactly match the user’s preferences.
+
+All users are treated the same. The formula (+2 genre, +1 mood, energy similarity) assumes everyone values genre over energy, which may not reflect real tastes.
+
+Popular genres like pop or lofi often dominate the top recommendations. Songs with higher energy tend to get higher scores, giving them an advantage even if the user prefers lower energy.
 ---
 
 ## 7. Evaluation
@@ -236,3 +241,43 @@ A few sentences about what you learned:
 - How did building this change how you think about real music recommenders
 - Where do you think human judgment still matters, even if the model seems "smart"
 
+## 10. Demo of Profile Recommendation!
+
+**Copied/Pasted Terminal Output**
+
+Top recommendations for User 1 (pop/happy):
+
+Sunrise City - Score: 3.98
+Because: genre match (+2.0), mood match (+1.0), energy similarity (+0.98)
+
+Gym Hero - Score: 2.87
+Because: genre match (+2.0), energy similarity (+0.87)
+
+Rooftop Lights - Score: 1.96
+Because: mood match (+1.0), energy similarity (+0.96)
+
+City Hustle - Score: 0.98
+Because: energy similarity (+0.98)
+
+Night Drive Loop - Score: 0.95
+Because: energy similarity (+0.95)
+
+
+Top recommendations for User 2 (lofi/chill):
+
+Midnight Coding - Score: 3.98
+Because: genre match (+2.0), mood match (+1.0), energy similarity (+0.98)
+
+Library Rain - Score: 3.95
+Because: genre match (+2.0), mood match (+1.0), energy similarity (+0.95)
+
+Focus Flow - Score: 3.00
+Because: genre match (+2.0), energy similarity (+1.00)
+
+Spacewalk Thoughts - Score: 1.88
+Because: mood match (+1.0), energy similarity (+0.88)
+
+Coffee Shop Stories - Score: 0.97
+Because: energy similarity (+0.97)
+
+Why did the songs rank #1: They maximized all scoring criteria genre match, mood match, and closest energy value. Any deviation in one of these factors (wrong genre, mood, or energy further from target) results in a lower score.
