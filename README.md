@@ -29,6 +29,8 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+My system will work by matching songs to a users personal taste using a few key features. Each Song includes attributes like genre, mood, energy, and tempo, which together describe the songs overall vibe. The UserProfile stores the listeners preferred genre, mood, energy level, and tempo, acting as a target for what they enjoy. To recommend music, the system compares each song to the user’s preferences and assigns it a score: songs get more points if the genre and mood match exactly, and additional points if their energy and tempo are close to the user’s preferred values. This means songs that feel more similar to the user’s taste receive higher scores. After scoring all songs, the system sorts them from highest to lowest score and recommends the top matches.
+
 ---
 
 ## Getting Started
