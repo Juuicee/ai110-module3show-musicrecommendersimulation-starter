@@ -31,6 +31,31 @@ You can include a simple diagram or bullet list if helpful.
 
 My system will work by matching songs to a users personal taste using a few key features. Each Song includes attributes like genre, mood, energy, and tempo, which together describe the songs overall vibe. The UserProfile stores the listeners preferred genre, mood, energy level, and tempo, acting as a target for what they enjoy. To recommend music, the system compares each song to the user’s preferences and assigns it a score: songs get more points if the genre and mood match exactly, and additional points if their energy and tempo are close to the user’s preferred values. This means songs that feel more similar to the user’s taste receive higher scores. After scoring all songs, the system sorts them from highest to lowest score and recommends the top matches.
 
+### Phase 2: Scoring Logic Overview
+
+I analyzed how the recommender calculates song scores to understand which songs will be suggested first.
+
+**Scoring formula:**
+
+- Genre match: +2.0 points  
+- Mood match: +1.5 points  
+- Acoustic preference match: +0.5 points  
+
+**Example calculation:**
+
+For a user who likes pop, happy, energy 0.75, and dislikes acoustic songs:
+
+- *Sunrise City* matches genre and mood, has similar energy, and is not acoustic → total score ≈ 5.86  
+- *Night Drive Loop* does not match genre or mood, but energy is perfect and not acoustic → total score ≈ 2.5  
+
+**Observations:**
+
+- Songs that match both genre and mood will usually rank first.  
+- Energy similarity helps break ties between similar songs.  
+- Acoustic preference is only a small factor.  
+- Genre dominates the scoring, so songs in other genres rarely reach the top even if they match mood and energy well.
+
+* Used the help of co-pilot
 ---
 
 ## Getting Started
