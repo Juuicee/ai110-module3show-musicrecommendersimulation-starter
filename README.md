@@ -1,5 +1,26 @@
 # 🎵 Music Recommender Simulation
 
+## Personal Reflection
+
+This project helped me understand how recommendation systems turn simple data into predictions. By assigning weights to features like genre, mood, and energy, I saw how a system can rank songs in a way that feels personalized even though it is based on basic math.
+
+One thing that stood out to me was how small changes in the scoring logic can significantly affect the results. For example, increasing the weight of genre caused the system to repeatedly recommend the same type of songs, while adjusting energy made the recommendations more varied. This showed me how easily bias can be introduced into a system depending on how features are prioritized.
+
+Using AI tools like Copilot helped speed up the coding process and gave me ideas for structuring functions, but I still had to carefully review and understand the logic to make sure it matched my intended design. It was especially important when debugging or adjusting the scoring system.
+
+What surprised me most is how even a simple recommender can feel accurate, but still miss important aspects of human taste. Real music preferences are more complex than just genre or mood, which made me realize why real-world systems are much more advanced.
+
+If I continued this project, I would focus on improving recommendation diversity and allowing the system to recognize similar genres instead of only exact matches. I would also explore adding more user data like listening history to make the recommendations feel more realistic.
+
+- The system struggles with conflicting preferences high energy and sad mood  
+- It only matches exact genres and moods, not similar ones  
+- The small dataset leads to repeated recommendations  
+
+### DEMO SCREENSHOT:
+
+
+![Top recommendations screenshot](images/recommender_users.png)
+
 ## Project Summary
 
 In this project you will build and explain a small music recommender system.
@@ -30,11 +51,6 @@ Some prompts to answer:
 You can include a simple diagram or bullet list if helpful.
 
 My system will work by matching songs to a users personal taste using a few key features. Each Song includes attributes like genre, mood, energy, and tempo, which together describe the songs overall vibe. The UserProfile stores the listeners preferred genre, mood, energy level, and tempo, acting as a target for what they enjoy. To recommend music, the system compares each song to the user’s preferences and assigns it a score: songs get more points if the genre and mood match exactly, and additional points if their energy and tempo are close to the user’s preferred values. This means songs that feel more similar to the user’s taste receive higher scores. After scoring all songs, the system sorts them from highest to lowest score and recommends the top matches.
-
-### DEMO SCREENSHOT:
-
-
-![Top recommendations screenshot](images/recommender_users.png)
 
 ### Phase 2: Scoring Logic Overview
 
